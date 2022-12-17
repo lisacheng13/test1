@@ -1,0 +1,19 @@
+<div id="app">
+  <label>
+    <input type="checkbox" v-model="isShow"> isShow: {{ isShow }}
+  </label>
+
+  <div class="wrap">
+    <div v-if="isShow"> V-if </div>
+    <div v-show="isShow"> V-show </div>
+  </div>
+</div>
+<javaScript>
+  const vm = Vue.createApp({
+    data: () => {
+      return {
+        isShow: true
+      }
+    },
+  }).mount('#app');
+</javaScript>
